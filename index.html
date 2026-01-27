@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack Growth Leaderty | Viviana Ruano Propiedades</title>
+    <meta name="description" content="Sistema integral de aceleración inmobiliaria. Web, IA, Automatización y Estrategia STORM.">
+    <style>
+        :root {
+            /* Palette: Quiet Luxury (Slate & Gold) */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --accent: #b59410; /* Soft Gold */
+            --accent-hover: #967a0d;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --success: #10b981;
+            --error: #ef4444;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #020617;
+            --bg-secondary: #0f172a;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --accent: #e2b814;
+            --border: #1e293b;
+            --card-bg: #0f172a;
+            --shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        button { cursor: pointer; border: none; background: none; transition: var(--transition); }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* --- Animations --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(var(--bg-primary), 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            height: 70px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: clamp(0.875rem, 2vw, 1.25rem);
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .nav-links {
+                display: flex;
+                gap: 2rem;
+            }
+        }
+
+        .nav-link {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .nav-link.active {
+            color: var(--accent);
+        }
+
+        .theme-toggle {
+            padding: 0.5rem;
+            border-radius: 9999px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            padding: 120px 0 80px;
+            background: radial-gradient(circle at top right, rgba(181, 148, 16, 0.05), transparent);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            #hero {
+                padding: 100px 0 60px;
+            }
+            .hero-grid {
+                gap: 3rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #hero {
+                padding: 120px 0 80px;
+            }
+            .hero-grid { 
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(181, 148, 16, 0.1);
+            color: var(--accent);
+            border-radius: 50px;
+            font-size: 0.625rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        @media (min-width: 768px) {
+            .hero-badge {
+                font-size: 0.75rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(1.875rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(0.875rem, 2vw, 1.125rem);
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            max-width: 500px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-subtitle {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-cta {
+                margin-bottom: 3rem;
+            }
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: clamp(0.75rem, 1.5vw, 1rem);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .btn {
+                padding: 1rem 2rem;
+            }
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
+
+        .btn-secondary {
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+        }
+        .btn-secondary:hover { background: var(--bg-secondary); }
+
+        .quick-summary {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        @media (min-width: 640px) {
+            .quick-summary { 
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        .summary-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        @media (min-width: 768px) {
+            .summary-card {
+                padding: 1.5rem;
+            }
+        }
+
+        .summary-val {
+            display: block;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .summary-label {
+            font-size: clamp(0.625rem, 1.5vw, 0.75rem);
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* Dashboard Mock */
+        .mock-dashboard {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            padding: 0.75rem;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .mock-dashboard {
+                padding: 1rem;
+            }
+        }
+
+        .mock-header {
+            height: 40px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            font-size: 0.625rem;
+        }
+
+        @media (min-width: 768px) {
+            .mock-header {
+                font-size: 0.75rem;
+            }
+        }
+
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); }
+
+        .mock-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .mock-content {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        .mock-bar { 
+            height: 60px;
+            background: var(--bg-secondary); 
+            border-radius: 4px; 
+            display: flex; 
+            align-items: flex-end; 
+            padding: 4px; 
+        }
+
+        @media (min-width: 768px) {
+            .mock-bar { 
+                height: 100px;
+            }
+        }
+
+        .bar-inner { background: var(--accent); width: 100%; border-radius: 2px; }
+
+        /* --- Problem Section --- */
+        #problema { 
+            padding: 60px 0;
+            background: var(--bg-secondary);
+        }
+
+        @media (min-width: 768px) {
+            #problema {
+                padding: 80px 0;
+            }
+        }
+
+        .section-header { 
+            text-align: center; 
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-header {
+                margin-bottom: 4rem;
+            }
+        }
+
+        .section-header h2 { 
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            margin-bottom: 1rem;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .problem-grid { 
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        .problem-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: flex;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .problem-card {
+                padding: 2rem;
+                gap: 1.5rem;
+            }
+        }
+
+        .problem-card h4 {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+        }
+
+        .problem-card p {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+        }
+
+        .problem-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--error);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        @media (min-width: 768px) {
+            .problem-icon {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        /* --- Features Section --- */
+        #features { 
+            padding: 60px 0;
+        }
+
+        @media (min-width: 768px) {
+            #features {
+                padding: 80px 0;
+            }
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+        .feature-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        @media (min-width: 768px) {
+            .feature-item {
+                padding: 2rem;
+            }
+        }
+
+        .feature-item h3 {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+        }
+
+        .feature-item p {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+        }
+
+        .feature-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        /* --- Roadmap --- */
+        #roadmap { 
+            padding: 60px 0;
+            background: var(--bg-secondary);
+        }
+
+        @media (min-width: 768px) {
+            #roadmap {
+                padding: 80px 0;
+            }
+        }
+
+        .roadmap-tabs {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            overflow-x: visible;
+            padding-bottom: 0;
+        }
+
+        @media (min-width: 640px) {
+            .roadmap-tabs {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .roadmap-tabs {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-bottom: 3rem;
+                overflow-x: auto;
+                padding-bottom: 1rem;
+            }
+        }
+
+        .tab-btn {
+            padding: 0.75rem 1rem;
+            border-radius: 50px;
+            border: 1px solid var(--border);
+            font-weight: 600;
+            white-space: nowrap;
+            font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+        }
+
+        @media (min-width: 768px) {
+            .tab-btn {
+                padding: 0.75rem 1.5rem;
+            }
+        }
+
+        .tab-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .roadmap-content {
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            min-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .roadmap-content {
+                padding: 3rem;
+            }
+        }
+
+        .roadmap-content h3 {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+        }
+
+        /* --- Value / Budget Allocation --- */
+        #valor { 
+            padding: 60px 0;
+        }
+
+        @media (min-width: 768px) {
+            #valor {
+                padding: 80px 0;
+            }
+        }
+
+        .budget-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .budget-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .budget-grid h2 {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+        }
+
+        .budget-grid p {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+        }
+
+        .budget-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .budget-bar-container {
+            width: 100%;
+            height: 12px;
+            background: var(--bg-secondary);
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .budget-segment { height: 100%; transition: width 1s ease-in-out; }
+
+        /* --- ROI Calculator --- */
+        #roi { 
+            padding: 60px 0;
+            background: var(--bg-secondary);
+        }
+
+        @media (min-width: 768px) {
+            #roi {
+                padding: 80px 0;
+            }
+        }
+
+        .roi-container {
+            background: var(--card-bg);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .roi-container {
+                padding: 3rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .roi-container { grid-template-columns: 1fr 1fr; }
+        }
+
+        .slider-group { margin-bottom: 1.5rem; }
+        
+        .slider-label { 
+            display: flex; 
+            justify-content: space-between; 
+            margin-bottom: 0.5rem; 
+            font-weight: 600;
+            font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 6px;
+            background: var(--border);
+            border-radius: 5px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .roi-results {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .roi-results {
+                padding: 2rem;
+            }
+        }
+
+        .roi-val {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: var(--accent);
+            margin: 1rem 0;
+        }
+
+        /* --- Tables --- */
+        .table-wrapper { 
+            overflow-x: auto; 
+            margin-top: 1rem;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            text-align: left;
+            font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+        }
+
+        th { 
+            padding: 0.75rem;
+            border-bottom: 2px solid var(--border); 
+            color: var(--text-secondary); 
+            font-size: clamp(0.7rem, 1.2vw, 0.875rem);
+            font-weight: 600;
+        }
+
+        td { 
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        @media (min-width: 768px) {
+            th { 
+                padding: 1rem;
+            }
+            td { 
+                padding: 1rem;
+            }
+        }
+
+        /* --- Modals --- */
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 1rem;
+        }
+
+        .modal-content {
+            background: var(--bg-primary);
+            max-width: 600px;
+            width: 100%;
+            border-radius: 20px;
+            padding: 2.5rem;
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+
+        .close-modal { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 1.5rem; }
+
+        /* --- Footer / CTA --- */
+        #cta-final {
+            padding: 60px 0;
+            background: radial-gradient(circle at bottom left, rgba(181, 148, 16, 0.1), transparent);
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            #cta-final {
+                padding: 100px 0;
+            }
+        }
+
+        .cta-box {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(1.875rem, 5vw, 3rem);
+        }
+
+        .cta-box p {
+            font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transform: translateY(200%);
+            transition: transform 0.3s ease;
+            z-index: 3000;
+        }
+        .toast.show { transform: translateY(0); }
+
+        /* Utilities */
+        .mt-4 { margin-top: 1rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .text-accent { color: var(--accent); }
+        .text-success { color: var(--success); }
+        
+        .grid-2 { 
+            display: grid; 
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .chip { 
+            display: inline-block;
+            padding: 0.25rem 0.75rem; 
+            border-radius: 50px; 
+            background: var(--bg-secondary); 
+            font-size: 0.625rem;
+            font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .chip {
+                font-size: 0.75rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container nav-content">
+            <div class="logo">Leaderty.</div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Inicio</a></li>
+                <li><a href="#problema" class="nav-link">Problemas</a></li>
+                <li><a href="#features" class="nav-link">El Pack</a></li>
+                <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                <li><a href="#roi" class="nav-link">ROI</a></li>
+            </ul>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <button class="theme-toggle" id="theme-btn" aria-label="Cambiar tema">
+                    <svg id="sun-icon" style="display:none" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg id="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container hero-grid">
+                <div class="reveal">
+                    <span class="hero-badge">✓ Proyecto en Ejecución</span>
+                    <h1 class="hero-title">Dashboard de Progreso <br><span class="text-accent">Viviana Ruano Propiedades</span></h1>
+                    <p class="hero-subtitle">Tu inversión de $600.000 mensuales está en marcha. Mirá en tiempo real el avance de cada etapa del Pack Growth Leaderty.</p>
+                    
+                    <!-- Payment Status -->
+                    <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 16px; margin: 2rem 0; border: 1px solid var(--border);">
+                        <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem;">Estado de Inversión</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                            <div>
+                                <div style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0.5rem; text-transform: uppercase; font-weight: 600;">Pago Inicial (50%)</div>
+                                <div style="font-size: 2.5rem; font-weight: 800; color: var(--success); margin-bottom: 0.5rem;">✓ Recibido</div>
+                                <div style="font-size: 1.125rem; color: var(--text-primary); font-weight: 600;">$300.000 ARS</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0.5rem; text-transform: uppercase; font-weight: 600;">Saldo Pendiente (50%)</div>
+                                <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent);">⏰ Sem 2</div>
+                                <div style="font-size: 1.125rem; color: var(--text-primary); font-weight: 600;">$300.000 ARS</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-summary">
+                        <div class="summary-card">
+                            <span class="summary-val">1/4</span>
+                            <span class="summary-label">Semanas Completadas</span>
+                        </div>
+                        <div class="summary-card">
+                            <span class="summary-val">25%</span>
+                            <span class="summary-label">Progreso Total</span>
+                        </div>
+                        <div class="summary-card">
+                            <span class="summary-val">Hoy</span>
+                            <span class="summary-label">Semana 1: Setup</span>
+                        </div>
+                        <div class="summary-card">
+                            <span class="summary-val">20+</span>
+                            <span class="summary-label">Canales en Setup</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <div class="mock-dashboard">
+                        <div class="mock-header">
+                            <div class="dot" style="background: #ff5f56;"></div>
+                            <div class="dot" style="background: #ffbd2e;"></div>
+                            <div class="dot" style="background: #27c93f;"></div>
+                            <span style="font-size: 10px; opacity: 0.5; margin-left: 10px;">progress.leaderty.online</span>
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4 style="font-size: 0.875rem;">Estado de Entregables</h4>
+                            <p style="font-size: 0.75rem; color: var(--text-secondary);">Progreso por Semana</p>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; margin-bottom: 0.5rem;">
+                                    <span>Semana 1: Setup</span>
+                                    <span style="color: var(--accent); font-weight: 600;">EN MARCHA</span>
+                                </div>
+                                <div style="height: 8px; background: var(--bg-secondary); border-radius: 4px; overflow: hidden;">
+                                    <div style="width: 75%; height: 100%; background: var(--accent);"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; margin-bottom: 0.5rem;">
+                                    <span>Semana 2: STORM</span>
+                                    <span style="color: var(--text-secondary);">PRÓXIMA</span>
+                                </div>
+                                <div style="height: 8px; background: var(--bg-secondary); border-radius: 4px; overflow: hidden;">
+                                    <div style="width: 0%; height: 100%; background: var(--success);"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; margin-bottom: 0.5rem;">
+                                    <span>Semana 3: Escala</span>
+                                    <span style="color: var(--text-secondary);">PLANEADO</span>
+                                </div>
+                                <div style="height: 8px; background: var(--bg-secondary); border-radius: 4px; overflow: hidden;">
+                                    <div style="width: 0%; height: 100%; background: #3b82f6;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; margin-bottom: 0.5rem;">
+                                    <span>Semana 4: Reporte</span>
+                                    <span style="color: var(--text-secondary);">PROGRAMADO</span>
+                                </div>
+                                <div style="height: 8px; background: var(--bg-secondary); border-radius: 4px; overflow: hidden;">
+                                    <div style="width: 0%; height: 100%; background: #e2e8f0;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problems Section -->
+        <section id="problema">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>El Desafío Inmobiliario Actual</h2>
+                    <p class="hero-subtitle" style="margin: 0 auto;">El mercado es más competitivo que nunca. Los dueños se contactan con quien responde primero. La IA no espera; los robots que sí la usan, tampoco.</p>
+                </div>
+                <div class="problem-grid">
+                    <div class="problem-card reveal">
+                        <div class="problem-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        </div>
+                        <div>
+                            <h4>Pérdida de Oportunidades</h4>
+                            <p>El 70% de los interesados se comunica con tu competidor si no les respondes en 5 minutos.</p>
+                            <span class="text-accent" style="font-size: 0.875rem; font-weight: 600;">✓ Solución: ManyChat Inteligente 24/7</span>
+                        </div>
+                    </div>
+                    <div class="problem-card reveal">
+                        <div class="problem-icon" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        </div>
+                        <div>
+                            <h4>Captación Pasiva</h4>
+                            <p>Esperar que los propietarios lleguen a ti = renunciar a oportunidades. Tu competencia ya busca activamente.</p>
+                            <span class="text-accent" style="font-size: 0.875rem; font-weight: 600;">✓ Solución: IA que Busca Dueños Automáticamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pack Details -->
+        <section id="features">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Lo que Recibes: Sistema Completo</h2>
+                    <p class="hero-subtitle" style="margin: 0 auto;">Todo listo para que tu único trabajo sea cerrar venta. La captación, seguimiento y posicionamiento corre por nuestra cuenta.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item reveal" onclick="openModal('feature-web')">
+                        <div class="summary-label mb-4">🌐 Tech & SEO</div>
+                        <h3>Web Central + Buscador</h3>
+                        <p class="text-secondary mt-4">Plataforma profesional con buscador inteligente, carga masiva de propiedades y SEO local para dominar Google en tu zona.</p>
+                        <div class="mt-4"><span class="chip">Semana 1</span></div>
+                    </div>
+                    <div class="feature-item reveal" onclick="openModal('feature-ia')">
+                        <div class="summary-label mb-4">⚙️ Automatización</div>
+                        <h3>Sistema STORM</h3>
+                        <p class="text-secondary mt-4">4 funnels especializados (dueños, compradores, inversores, inquilinos), automatización ManyChat y respuesta 24/7.</p>
+                        <div class="mt-4"><span class="chip">Semana 2</span></div>
+                    </div>
+                    <div class="feature-item reveal" onclick="openModal('feature-social')">
+                        <div class="summary-label mb-4">📱 Redes Sociales</div>
+                        <h3>Motor de Contenido 24/7</h3>
+                        <p class="text-secondary mt-4">8 cuentas gestionadas (4 Instagram, 4 TikTok), reels diarios, carruseles de propiedades y engagement constante.</p>
+                        <div class="mt-4"><span class="chip">Semana 3</span></div>
+                    </div>
+                    <div class="feature-item reveal" onclick="openModal('feature-data')">
+                        <div class="summary-label mb-4">📊 Análisis</div>
+                        <h3>Reportes Ejecutivos</h3>
+                        <p class="text-secondary mt-4">Informe mensual detallado: leads captados, cierres logrados, ROI y recomendaciones para optimizar resultados.</p>
+                        <div class="mt-4"><span class="chip">Mensualmente</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap -->
+        <section id="roadmap">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Roadmap de Implementación</h2>
+                    <p>De cero a una máquina de ventas operativa en 4 semanas.</p>
+                </div>
+                
+                <div class="roadmap-tabs reveal">
+                    <button class="tab-btn active" onclick="showWeek(1)" style="background: var(--accent); color: white; border-color: var(--accent);">📋 Semana 1 (EN MARCHA)</button>
+                    <button class="tab-btn" onclick="showWeek(2)">⚡ Semana 2</button>
+                    <button class="tab-btn" onclick="showWeek(3)">🚀 Semana 3</button>
+                    <button class="tab-btn" onclick="showWeek(4)">📈 Semana 4</button>
+                </div>
+
+                <div id="roadmap-content" class="roadmap-content reveal">
+                    <!-- Dynamic content injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Value Distribution -->
+        <section id="valor">
+            <div class="container">
+                <div class="budget-grid">
+                    <div class="reveal">
+                        <h2>Tu Inversión vs. Costo de Mercado</h2>
+                        <p class="mb-4">Contratar esta infraestructura por separado requeriría 4 agencias diferentes y un costo 3x mayor. Con Leaderty obtenés todo integrado.</p>
+                        
+                        <div class="budget-chart mt-4">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                                <span>Distribución Pack Growth ($600.000)</span>
+                                <span class="text-accent">100%</span>
+                            </div>
+                            <div class="budget-bar-container">
+                                <div class="budget-segment" style="width: 25%; background: #b59410;" title="Web & SEO"></div>
+                                <div class="budget-segment" style="width: 25%; background: #475569;" title="Redes & Contenido"></div>
+                                <div class="budget-segment" style="width: 20%; background: #1e293b;" title="IA & ManyChat"></div>
+                                <div class="budget-segment" style="width: 30%; background: #e2e8f0;" title="Estrategia & Otros"></div>
+                            </div>
+                            <div style="display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.75rem;">
+                                <span><span style="color:#b59410">●</span> Web/SEO (150k)</span>
+                                <span><span style="color:#475569">●</span> Redes (150k)</span>
+                                <span><span style="color:#1e293b">●</span> IA/Chat (100k)</span>
+                                <span><span style="color:#e2e8f0">●</span> Funnels/Estrategia (200k)</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-4" style="background: var(--bg-secondary); padding: 2rem; border-radius: 12px;">
+                            <p style="font-size: 1.125rem;"><strong>Valor de Mercado Equivalente:</strong> <span style="text-decoration: line-through; opacity: 0.5;">$1.850.000 ARS</span></p>
+                            <p class="text-accent" style="font-size: 1.5rem; font-weight: 800;">Tu Economía Mensual: $1.250.000 ARS</p>
+                        </div>
+                    </div>
+
+                    <div class="reveal">
+                        <h3>Herramientas que yo cubro</h3>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Herramienta</th>
+                                        <th>Uso</th>
+                                        <th>Costo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Perplexity AI Pro</td>
+                                        <td>Captación Dueños</td>
+                                        <td><span class="text-success">Cubierto</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hosting & Dominios</td>
+                                        <td>Infraestructura Web</td>
+                                        <td><span class="text-success">Cubierto</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ManyChat Pro</td>
+                                        <td>Automatización WA/IG</td>
+                                        <td><span class="text-success">Cubierto</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Canva/CapCut Pro</td>
+                                        <td>Edición High-End</td>
+                                        <td><span class="text-success">Cubierto</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI Calculator -->
+        <section id="roi">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Simulador de Resultados</h2>
+                    <p>Proyectá tu ROI con números realistas. Mirá cuántas ventas necesitas para que se pague solo.</p>
+                </div>
+
+                <div class="roi-container reveal">
+                    <div>
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <span>Comisión Promedio</span>
+                                <span id="val-comision">$15.000 USD</span>
+                            </div>
+                            <input type="range" id="input-comision" min="1000" max="50000" step="500" value="15000">
+                        </div>
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <span>Leads Mensuales Nuevos</span>
+                                <span id="val-leads">50</span>
+                            </div>
+                            <input type="range" id="input-leads" min="10" max="200" step="5" value="50">
+                        </div>
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <span>Cierres Adicionales / Mes</span>
+                                <span id="val-cierres">1</span>
+                            </div>
+                            <input type="range" id="input-cierres" min="0" max="10" step="1" value="1">
+                        </div>
+                        <div class="grid-2 mt-4">
+                            <button class="btn btn-secondary" style="font-size: 0.75rem;" onclick="setScenario('conservador')">Conservador</button>
+                            <button class="btn btn-secondary" style="font-size: 0.75rem;" onclick="setScenario('realista')">Realista</button>
+                        </div>
+                    </div>
+
+                    <div class="roi-results">
+                        <span class="summary-label">Ganancia Neta Estimada (ARS)</span>
+                        <div class="roi-val" id="roi-resultado">$18.400.000</div>
+                        <p id="roi-info" class="text-secondary">Con solo 1 cierre extra, recuperás la inversión 30 veces.</p>
+                        <button class="btn btn-primary mt-4" onclick="saveROI()">Guardar este escenario</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparativo -->
+        <section style="padding: 80px 0;">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Por Qué Somos Diferente</h2>
+                </div>
+                <div class="table-wrapper reveal">
+                    <table style="background: var(--card-bg); border-radius: 16px;">
+                        <thead>
+                            <tr>
+                                <th>Característica</th>
+                                <th>Tradicional</th>
+                                <th class="text-accent">Leaderty Growth</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Costo Mensual</td>
+                                <td>ALTO +$1.350.000 (empleados + impuestos)</td>
+                                <td>Flat ($600k)</td>
+                            </tr>
+                            <tr>
+                                <td>Automatización</td>
+                                <td>Nula</td>
+                                <td>ManyChat 24/7</td>
+                            </tr>
+                            <tr>
+                                <td>Captación Dueños</td>
+                                <td>Esperar que entren</td>
+                                <td>Activa con IA (ML/Redes)</td>
+                            </tr>
+                            <tr>
+                                <td>Contenido</td>
+                                <td>Solo fotos</td>
+                                <td>Reels, Carruseles, Stories</td>
+                            </tr>
+                            <tr>
+                                <td>Personalización</td>
+                                <td>Genérica</td>
+                                <td>Diseño Boutique Vivi Ruano</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section id="cta-final">
+            <div class="container reveal">
+                <div class="cta-box">
+                    <span class="hero-badge">✓ Semana 1 en Progreso</span>
+                    <h2 class="hero-title" style="font-size: 3rem;">Auditoría & Setup en Marcha</h2>
+                    <p class="hero-subtitle" style="margin: 0 auto 2rem;">El equipo está trabajando en la preparación de infraestructura. En 7 días la web central estará operativa.</p>
+                    <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 16px; margin-top: 2rem;">
+                        <h3 style="margin-bottom: 1.5rem;">Tareas Completadas esta Semana</h3>
+                        <ul style="display: flex; flex-direction: column; gap: 1rem;">
+                            <li style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="color: var(--success); font-size: 1.5rem;">✓</div>
+                                <span>Auditoría integral del negocio completada</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="color: var(--success); font-size: 1.5rem;">✓</div>
+                                <span>Infraestructura de hosting y dominios configurada</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="color: var(--success); font-size: 1.5rem;">✓</div>
+                                <span>Google Analytics y rastreo de conversiones activo</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="color: var(--text-secondary); font-size: 1.5rem;">⟳</div>
+                                <span style="color: var(--text-secondary);">Web central + Buscador (en desarrollo - 75% completado)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <div id="modal-container" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Escenario guardado con éxito.</div>
+
+    <script>
+        // --- Theme Management ---
+        const themeBtn = document.getElementById('theme-btn');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            if (theme === 'dark') {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            } else {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            }
+        }
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+
+        themeBtn.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+
+        // --- Intersection Observer for Reveals ---
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // --- Roadmap Logic ---
+        const roadmapData = {
+            1: {
+                title: "Semana 1: Preparación e Infraestructura",
+                items: ["Auditoría del negocio (presencial o virtual)", "Setup de Web Central con buscador inteligente", "Configuración de Google Analytics y SEO local", "Estructura de contenidos visuales para redes", "Setup inicial de dominios y hosting"]
+            },
+            2: {
+                title: "Semana 2: Activación del Sistema STORM",
+                items: ["Lanzamiento de 4 funnels especializados", "Implementación y testeo de ManyChat", "Integración WhatsApp Business API", "Primeros leads en el sistema", "Calibración de respuestas automáticas"]
+            },
+            3: {
+                title: "Semana 3: Escala y Captación Activa",
+                items: ["Activación de 8 cuentas sociales (4 IG + 4 TikTok)", "Búsqueda automática de dueños con IA", "Publicación de contenido en redes", "Optimización de flujos según primeros datos", "Revisión de calidad de leads captados"]
+            },
+            4: {
+                title: "Semana 4: Reporte y Optimización",
+                items: ["Primer informe mensual ejecutivo", "Análisis de métricas y ROI", "Reunión de revisión de resultados", "Ajustes estratégicos según datos reales", "Plan de mantenimiento y mejora continua"]
+            }
+        };
+
+        function showWeek(week) {
+            const container = document.getElementById('roadmap-content');
+            const data = roadmapData[week];
+            
+            // Update buttons
+            document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
+                btn.classList.toggle('active', idx + 1 === week);
+            });
+
+            container.innerHTML = `
+                <h3 class="mb-4">${data.title}</h3>
+                <ul style="display: flex; flex-direction: column; gap: 1rem;">
+                    ${data.items.map(item => `
+                        <li style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <div style="width: 12px; height: 12px; background: var(--accent); border-radius: 50%;"></div>
+                            </div>
+                            <span>${item}</span>
+                        </li>
+                    `).join('')}
+                </ul>
+                <div class="mt-4" style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; font-size: 0.875rem;">
+                    <strong>Checklist:</strong> Dominio activo, Analytics conectado, Auditoría realizada.
+                </div>
+            `;
+        }
+
+        showWeek(1); // Default
+
+        // --- ROI Calculator Logic ---
+        const inputs = {
+            comision: document.getElementById('input-comision'),
+            leads: document.getElementById('input-leads'),
+            cierres: document.getElementById('input-cierres')
+        };
+        const displays = {
+            comision: document.getElementById('val-comision'),
+            leads: document.getElementById('val-leads'),
+            cierres: document.getElementById('val-cierres'),
+            resultado: document.getElementById('roi-resultado')
+        };
+
+        const USD_TO_ARS = 1300; // Tasa estimada
+
+        function updateROI() {
+            const com = parseInt(inputs.comision.value);
+            const lds = parseInt(inputs.leads.value);
+            const crs = parseInt(inputs.cierres.value);
+
+            displays.comision.innerText = `$${com.toLocaleString()} USD`;
+            displays.leads.innerText = lds;
+            displays.cierres.innerText = crs;
+
+            const gananciaUSD = com * crs;
+            const gananciaARS = (gananciaUSD * USD_TO_ARS) - 600000;
+            
+            displays.resultado.innerText = `$${gananciaARS.toLocaleString()}`;
+            
+            const info = document.getElementById('roi-info');
+            if(crs >= 1) {
+                info.innerText = `Con ${crs} cierre/s extra, tu ROI es masivo. Se paga solo.`;
+                info.style.color = "var(--success)";
+            } else {
+                info.innerText = "Incrementá los cierres para ver el impacto real.";
+                info.style.color = "var(--text-secondary)";
+            }
+        }
+
+        Object.values(inputs).forEach(input => input.addEventListener('input', updateROI));
+
+        function setScenario(type) {
+            if(type === 'conservador') {
+                inputs.comision.value = 10000;
+                inputs.leads.value = 30;
+                inputs.cierres.value = 1;
+            } else {
+                inputs.comision.value = 20000;
+                inputs.leads.value = 80;
+                inputs.cierres.value = 3;
+            }
+            updateROI();
+        }
+
+        function saveROI() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        updateROI();
+
+        // --- Modal Management ---
+        const modalContainer = document.getElementById('modal-container');
+        const modalBody = document.getElementById('modal-body');
+
+        function openModal(type) {
+            let content = "";
+            if(type === 'onboarding') {
+                content = `
+                    <h3>Pasos para Comenzar</h3>
+                    <p class="mb-4">Para activar el Pack necesitamos estos 4 datos:</p>
+                    <ul style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+                        <li><strong>✓ Dominio:</strong> Nombre de la web central (ej: viviarauano.online)</li>
+                        <li><strong>✓ Accesos Redes:</strong> Credenciales de Facebook/Instagram para automatización</li>
+                        <li><strong>✓ WhatsApp Business:</strong> Número para conectar la API</li>
+                        <li><strong>✓ Catálogo:</strong> Fotos y datos de propiedades para carga inicial</li>
+                    </ul>
+                    <p style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; font-size: 0.875rem;">Respondé estas preguntas por WhatsApp y comenzamos en 24 horas.</p>
+                    <a href="https://wa.me/5491100000000?text=Hola%20Vivi,%20aprobemos%20el%20inicio%20del%20Pack%20Growth%20Leaderty." class="btn btn-primary" style="width: 100%; justify-content: center;">Aprobar por WhatsApp →</a>
+                `;
+            } else {
+                content = `
+                    <h3>Arquitectura del Sistema</h3>
+                    <p>No es una herramienta de diseño. Es un ecosistema completo de captación, automatización y escalado.</p>
+                    <div class="mt-4" style="padding: 1rem; background: var(--bg-secondary); border-radius: 8px;">
+                        <p style="margin-bottom: 0.5rem;"><strong>Incluye:</strong></p>
+                        <ul style="margin: 0.5rem 0; font-size: 0.875rem;">
+                            <li>✓ Auditoría mensual de resultados</li>
+                            <li>✓ Gestión proactiva de crisis en redes</li>
+                            <li>✓ Soporte 24/7 del sistema</li>
+                            <li>✓ Optimización continua basada en datos</li>
+                        </ul>
+                    </div>
+                `;
+            }
+            modalBody.innerHTML = content;
+            modalContainer.style.display = 'flex';
+        }
+
+        function closeModal() {
+            modalContainer.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modalContainer) closeModal();
+        }
+
+        // --- Sticky Nav Logic ---
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.style.padding = "0.5rem 0";
+            } else {
+                nav.style.padding = "0 0";
+            }
+
+            // Highlighting active section
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
